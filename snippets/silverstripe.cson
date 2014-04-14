@@ -1,0 +1,68 @@
+'.text.html.ss':
+  'control':
+    'prefix': 'control'
+    'body': '<% control ${1} %>\n${2}\n<% end_control %>'
+  'if':
+    'prefix': 'if'
+    'body': '<% if ${1} %>\n${2}\n<% end_if %>'
+  'ifelse':
+    'prefix': 'ifelse'
+    'body': '<% if ${1} %>\n${2}\n<% else %>\n${3}\n<% end_if %>'
+'.source.php':
+  'CalendarDateField':
+    'prefix': 'newfield'
+    'body': 'new CalendarDateField("${1:name}","${2:title}")$0'
+  'Class Controller Skeleton':
+    'prefix': 'skel'
+    'body': '<?php\n\tclass $1 extends ${2:Page} {\n\t\tstatic \\$db = array(\n\t\t\t"$3" => "${4:Varchar/Text/HTMLVarchar/HTMLText/Enum/Boolean/Int/Date/Datetime/Time}",$0\n\t\t);\n\t\tstatic \\$has_one = array(\n\t     );\n\t}\n\n\tclass ${1}_Controller extends ${2}_Controller {\n\t\tfunction init() {\n\t\t\tparent::init();\n\t\t}\n\t}\n?>'
+  'Debug-message':
+    'prefix': 'dm'
+    'body': 'Debug::message(${1});'
+  'Debug-show':
+    'prefix': 'ds'
+    'body': 'Debug::show(${1});'
+  'FileIFrameField':
+    'prefix': 'newfield'
+    'body': 'new FileIFrameField("${1:name}")$0'
+  'HTMLEditorField':
+    'prefix': 'newfield'
+    'body': 'new HtmlEditorField("${1:name}","${2:title}")$0'
+  'ImageField':
+    'prefix': 'newfield'
+    'body': 'new ImageField("$1", "$2", null, null, null, "${3:assets/folder}")$0'
+  'TextField':
+    'prefix': 'newfield'
+    'body': 'new TextField("${1:name}","${2:title}","${3:value}")$0'
+  'TextareaField':
+    'prefix': 'newfield'
+    'body': 'new TextareaField("${1:name}","${2:title}","${3:rows}","${4:cols}","${5:value}")$0'
+  'addFieldToTab':
+    'prefix': 'addfield'
+    'body': 'addFieldToTab("${1:Root.Content}", $0,"${3:insertBefore}");\n'
+  'addFieldsToTab':
+    'prefix': 'addfield'
+    'body': 'addFieldsToTab("${1:Root.Content}", array(\n\t$0\n));\n'
+  'belongs_many_many':
+    'prefix': 'bmm'
+    'body': 'static \\$belongs_many_many = array(\n\t\'${1}\' => \'${2}\',\n);'
+  'db':
+    'prefix': 'db'
+    'body': 'static \\$db = array(\n\t\'${1}\' => \'${2}\',\n);'
+  'getcmsfields':
+    'prefix': 'getcmsfields'
+    'body': 'function getCMSFields() {\n\t\\$fields = parent::getCMSFields();\n\t\\$fields->$0\n\treturn \\$fields;\n}'
+  'has_many':
+    'prefix': 'hm'
+    'body': 'static \\$has_many = array(\n\t\'${1}\' => \'${2}\',\n);'
+  'has_one':
+    'prefix': 'ho'
+    'body': 'static \\$has_one = array(\n\t\'${1}\' => \'${2}\',\n);'
+  'many_many':
+    'prefix': 'mm'
+    'body': 'static \\$many_many = array(\n\t\'${1}\' => \'${2}\',\n);'
+  'showqueries':
+    'prefix': 'showq'
+    'body': '\\$_REQUEST[\'showqueries\'] = 1;'
+  'var_dump':
+    'prefix': 'vd'
+    'body': 'var_dump(${1});'
