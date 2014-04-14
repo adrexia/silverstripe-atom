@@ -1,5 +1,5 @@
 {
-  "name": "silverstripe bundle",
+  "name": "silverstripe-bundle",
   "version": "0.0.0",
   "description": "An atom port of the Silverstripe Textmate Bundle by @mattash",
   "repository": "https://github.com/adrexia/silverstripe-atom.git",
